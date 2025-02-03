@@ -14,7 +14,7 @@ jobs:
     runs-on: ubuntu-latest
     # This tells GitHub to use the environment named "PRODUCTION" for this job,
     # so any secrets, protection rules, or variables configured for that environment apply.
-    environment: production-123
+    environment: Production-234
     steps:
       # Checks out your repository so that the job can access it
       - uses: actions/checkout@v4
