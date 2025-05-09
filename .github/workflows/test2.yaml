@@ -1,0 +1,30 @@
+# This is a basic workflow to help you get started with Actions
+#this is anuragbisen12
+name: CSE
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "testing-files" ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    # This tells GitHub to use the environment named "PRODUCTION" for this job,
+    # so any secrets, protection rules, or variables configured for that environment apply.
+    environment: prod
+    steps:
+      # Checks out your repository so that the job can access it
+      - uses: actions/checkout@v4
+
+      # Runs a single command using the runner's shell
+      - name: Run a one-line script
+        run: echo "Hello, world!"
+
+      # Runs multiple commands using the runner's shell
+      - name: Run a multi-line script
+        run: |
+          echo "Add other actions to build,"
+          echo "test, and deploy your project."
